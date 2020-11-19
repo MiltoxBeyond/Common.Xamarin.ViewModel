@@ -73,7 +73,7 @@ Example:
 			return value;
 		}
 		set {
-	      //Optional if you need to compare the values or something along those lines
+          //Optional if you need to compare the values or something along those lines
 		  var oldValue = GetValue<string>(); 
 		  //Called everytime there is a change in the value of this particular property.
 		  CallMethodWithBothValues(oldValue, value);
@@ -120,7 +120,7 @@ If you want to enable the `INavigationAware`, `IResetOnNavigation` events than i
         }
 
         internal Page CurrentPage => 
-			(Current?.CurrentItem?.CurrentItem as IShellSectionController)?.PresentedPage;
-		#end region
+             (Current?.CurrentItem?.CurrentItem as IShellSectionController)?.PresentedPage;
+        #end region
     }
 ```
