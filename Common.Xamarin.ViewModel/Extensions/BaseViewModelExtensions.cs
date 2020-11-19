@@ -16,7 +16,7 @@ namespace Common.Xamarin.ViewModel.Extensions
 
         public static void RaiseRelated<T>(this T self, int depth, params string[] which) where T:BaseViewModel
         {
-            var type = typeof(T);
+            var type = self.GetType();
             var lookup = _cache[type];
 
             foreach(var item in which)

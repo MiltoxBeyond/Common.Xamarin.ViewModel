@@ -39,11 +39,16 @@ namespace Common.Xamarin.ViewModel.Internal
         /// <returns>Relationship AffectingLookup for mapped interactions between properties</returns>
         internal static AffectingLookup GetAffected(Type type)
         {
+            AffectingLookup lookup = new AffectingLookup();
             var properties = type.GetProperties().Where(p => p.CanWrite || p.CanRead);
-            var affects = (AffectingLookup)properties.Where(p => p.CustomAttributes.Any(a => a.AttributeType == typeof(AffectsAttribute)))
-                                                     .ToDictionary(p => p.Name, p => p.GetCustomAttribute<AffectsAttribute>().Affects.ToList());
+            var affects = properties.Where(p => p.GetCustomAttribute<AffectsAttribute>() != null);
+            var affectedByList = properties.Where(p => p.GetCustomAttribute<AffectedByAttribute>() != null);
 
-            var affectedByList = properties.Where(p => p.CustomAttributes.Any(a => a.AttributeType == typeof(AffectedByAttribute)));
+            foreach(var affect in affects)
+            {
+                var affectList = affect.GetCustomAttribute<AffectsAttribute>().Affects.ToList();
+                lookup.Add(affect.Name, affectList);
+            }
 
             foreach (var affectedProperty in affectedByList)
             {
@@ -51,15 +56,15 @@ namespace Common.Xamarin.ViewModel.Internal
 
                 foreach(var affectingProperty in affectingPropertyList)
                 {
-                    if(!affects.ContainsKey(affectingProperty) )
+                    if(!lookup.ContainsKey(affectingProperty) )
                     {
-                        affects[affectingProperty] = new List<string>();
+                        lookup[affectingProperty] = new List<string>();
                     }
-                    affects[affectingProperty].Add(affectedProperty.Name);
+                    lookup[affectingProperty].Add(affectedProperty.Name);
                 }
             }
 
-            return affects;
+            return lookup;
         }
 
         public AffectingLookup this[Type type] => ContainsKey(type.FullName) ? this[type.FullName] : Add(type); 

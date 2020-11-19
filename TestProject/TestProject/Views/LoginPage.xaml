@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:vm="clr-namespace:TestProject.ViewModels"
+             mc:Ignorable="d"
+             x:Class="TestProject.Views.LoginPage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.BindingContext>
+        <vm:LoginViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#E0E0E0">
+            <Frame Padding="10" HasShadow="True" BackgroundColor="White" 
+                   HorizontalOptions="Fill" CornerRadius="10" Margin="50"
+                   VerticalOptions="CenterAndExpand">
+                <StackLayout MinimumWidthRequest="250">
+                    <Entry Text="{Binding Username}" Placeholder="Username" />
+                    <Entry Text="{Binding Password}" Placeholder="Password" />
+                    <Button IsEnabled="{Binding IsValid}" VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}"/>
+                </StackLayout>
+                
+            </Frame>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

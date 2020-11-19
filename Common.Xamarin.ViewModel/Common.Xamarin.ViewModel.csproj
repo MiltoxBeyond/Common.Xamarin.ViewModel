@@ -2,15 +2,16 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net5.0;netstandard2.1</TargetFrameworks>
-    <Version>1.0.4</Version>
+    <Version>1.0.5-DEV</Version>
     <Description>Complete Rewrite of Common.Xamarin.ViewModel with some updated tricks for relationships. Also making it open source so I don't leave everyone without documentation.</Description>
     <Copyright>2020 Milton Zurita</Copyright>
-    <PackageLicenseExpression>mit</PackageLicenseExpression>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/MiltoxBeyond/Common.Xamarin.ViewModels</PackageProjectUrl>
     <RepositoryUrl>https://github.com/MiltoxBeyond/Common.Xamarin.ViewModels</RepositoryUrl>
     <RepositoryType>GIT</RepositoryType>
     <PackageTags>Xamarin,BaseViewModel,Affects,AffectedBy</PackageTags>
     <PackageReleaseNotes>Rewrite of Common.Xamarin.ViewModel since I lost the old code due to international move.</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
 </Project>

@@ -1,15 +1,21 @@
 ﻿using Common.Xamarin.ViewModel.Extensions;
+using Common.Xamarin.ViewModel.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Common.Xamarin.ViewModel
 {
-    public class BaseViewModel : INotifyPropertyChanged
+    public class BaseViewModel : INotifyPropertyChanged, IInitializeAsync
     {
         public bool IsBusy { get => GetValue<bool>(); set => SetValue(value); }
 
+        public BaseViewModel()
+        {
+            Task.Run(async () => await InitializeAsync());
+        }
 
         #region Property Utilities
         private IDictionary<string, object> _values { get; } = new Dictionary<string, object>();
@@ -38,6 +44,8 @@ namespace Common.Xamarin.ViewModel
                 this.RaiseRelated(depth+1, propertyName);
             }
         }
+
+        public virtual Task InitializeAsync() { return Task.CompletedTask; } 
 
         #endregion
     }
