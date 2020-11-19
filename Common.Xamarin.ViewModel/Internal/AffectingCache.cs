@@ -67,6 +67,11 @@ namespace Common.Xamarin.ViewModel.Internal
             return lookup;
         }
 
+        /// <summary>
+        /// Lookup Shortcut
+        /// </summary>
+        /// <param name="type">The type to lookup otherwise build cache from</param>
+        /// <returns>The Affecting Lookup List</returns>
         public AffectingLookup this[Type type] => ContainsKey(type.FullName) ? this[type.FullName] : Add(type); 
     }
 }

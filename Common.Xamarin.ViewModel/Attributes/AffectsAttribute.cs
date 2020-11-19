@@ -13,6 +13,9 @@ namespace Common.Xamarin.ViewModel.Attributes
     /// </example>
     public class AffectsAttribute : Attribute
     {
+        /// <summary>
+        /// List of Properties that are affected by this Attribute Annotated Property
+        /// </summary>
         public string[] Affects { get; }
 
         public AffectsAttribute(params string[] affects)
