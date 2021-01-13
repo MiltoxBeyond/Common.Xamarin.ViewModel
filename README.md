@@ -1,6 +1,8 @@
 # Common.Xamarin.ViewModel
 Common Xamarin ViewModel to Help with Property Relationships
 
+*Side note:* I uploaded the package pointing to Common.Xamarin.ViewModels. It's a minor mistake, I'll fix it if there is another release, but seems foolish to push just for a cosmetic change.
+
 ## Purpose
 This library was created to eliminate some of the boilerplating that is needed to have a useful viewmodel in Xamarin (or WPF). 
 
