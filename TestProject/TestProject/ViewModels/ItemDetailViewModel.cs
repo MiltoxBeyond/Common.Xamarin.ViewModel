@@ -7,7 +7,7 @@ using Xamarin.Forms;
 namespace TestProject.ViewModels
 {
     [QueryProperty(nameof(ItemId), nameof(ItemId))]
-    public class ItemDetailViewModel : BaseViewModel
+    public class ItemDetailViewModel : BaseModel
     {
         private string itemId;
         private string text;

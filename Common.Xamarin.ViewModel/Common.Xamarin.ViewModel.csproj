@@ -2,18 +2,16 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net5.0;netstandard2.1</TargetFrameworks>
-    <Version>1.1.0</Version>
+    <Version>1.1.1</Version>
     <Description>Complete Rewrite of Common.Xamarin.ViewModel with some updated tricks for relationships. Also making it open source so I don't leave everyone without documentation.</Description>
-    <Copyright>2020 Milton Zurita</Copyright>
+    <Copyright>2021 Milton Zurita</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/MiltoxBeyond/Common.Xamarin.ViewModels</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/MiltoxBeyond/Common.Xamarin.ViewModels</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/MiltoxBeyond/Common.Xamarin.ViewModel</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/MiltoxBeyond/Common.Xamarin.ViewModel</RepositoryUrl>
     <RepositoryType>GIT</RepositoryType>
     <PackageTags>Xamarin,BaseViewModel,Affects,AffectedBy</PackageTags>
-    <PackageReleaseNotes>- Rewrite of Common.Xamarin.ViewModel since I lost the old code due to international move.
-- Has some breaking changes due to the rewrite.  `Set&lt;T&gt;` has been replaced with `SetValue&lt;T&gt;`.
-- Open Sourced the Code on Github.
-- Added Documentation</PackageReleaseNotes>
+    <PackageReleaseNotes>- Small Bug Fix for Setting some values to null not triggering viewmodel changes.
+- Fixed Nuget Project pointing to wrong github url.</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 

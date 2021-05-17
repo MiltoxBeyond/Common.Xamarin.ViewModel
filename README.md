@@ -57,6 +57,42 @@ public class RelationshipViewModel : Common.Xamarin.ViewModel {
 }
 ```
 
+## ShellAware ViewModels  * **New** *
+**Package:Common.Xamarin.ViewModel.ShellAware**
+Shell Aware View Models simplify the process of navigating through shell as well as passing and receiving values between viewmodels. This is an extension of the 
+common BaseViewModels but specifically for Xamarin.
+
+### `ShellAwareViewModel`:
+Class that automates a lot of the process of transmitting information between viewmodels as navigation occurs. Initially I intended to extend the process allowed
+via `QueryPropertyAttribute` usage, but Xamarin already does some auto setting via this parameter which do not allow for complex data transmission. It extends 
+BaseViewModel so the same utilities for getting and setting are still available.  There are 2 attributes which simplify communication:
+
+#### QueryParameterAttribute
+These are examples of the usage of the parameters passed via query between shell viewmodels
+
+```csharp
+    [QueryParameter("queryid")] //Receive value stored in shell parameter queryId
+	 public string QueryId { get => GetValue<string>(); set => SetValue(value); }
+
+    [QueryParameter] //Receive value stored in shell parameter of the same name as the property
+     public int Id { get => GetValue<string>(); set => SetValue(value); }
+```
+
+#### NavigationParameterAttribute
+These are examples of the usage.  This attribute inherits from QueryParameterAttribute so it automatically populates the value on navigating to the viewmodel with this 
+attribute, and will automatically populate the query on navigation. The parameters are the same as `QueryParameterAttribute`.
+
+### Automating Communication 
+The `ShellAwareViewModel` has a method `GoToAsync` that wraps around the Shell.Current.GoToAsync method, but adds the logic to serialize data transmitted between viewmodels.
+
+```csharp
+   await GoToAsync("NewRoute"); //Will serialize any navigation properties into the Query
+   await GoToAsync("NewRoute", new Dictionary<string, object> { 
+                                   { "Test", 1 }
+                               });
+```
+
+
 ## Additional
 
 ### Triggers on Change

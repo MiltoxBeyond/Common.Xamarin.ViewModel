@@ -46,7 +46,8 @@ namespace Common.Xamarin.ViewModel
         {
             //If doesn't have the value or if the value has actually changed, then trigger the property changed event.
             if(!_values.ContainsKey(propertyName) || 
-               (_values[propertyName] is T data && !EqualityComparer<T>.Default.Equals(data, value)))
+               (_values[propertyName] is T data && !EqualityComparer<T>.Default.Equals(data, value)) ||
+               (_values[propertyName] == null && value != null))
             {
                 _values[propertyName] = value;
                 RaisePropertyChanged(propertyName);

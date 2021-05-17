@@ -14,8 +14,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{76CD3E79-560C-42CB-B069-99571C1D87EF}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		Common.Xamarin.ViewModel.Icon.png = Common.Xamarin.ViewModel.Icon.png
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Xamarin.ViewModel.ShellAware", "Common.Xamarin.ShellModel\Common.Xamarin.ViewModel.ShellAware.csproj", "{88DD9DB7-CE29-460A-A43C-3C3CD9B7262A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +82,18 @@ Global
 		{15982A28-B9C7-4CDF-AFB4-EA65FD10B395}.Release|iPhone.Build.0 = Release|Any CPU
 		{15982A28-B9C7-4CDF-AFB4-EA65FD10B395}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{15982A28-B9C7-4CDF-AFB4-EA65FD10B395}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{88DD9DB7-CE29-460A-A43C-3C3CD9B7262A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88DD9DB7-CE29-460A-A43C-3C3CD9B7262A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88DD9DB7-CE29-460A-A43C-3C3CD9B7262A}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{88DD9DB7-CE29-460A-A43C-3C3CD9B7262A}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{88DD9DB7-CE29-460A-A43C-3C3CD9B7262A}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{88DD9DB7-CE29-460A-A43C-3C3CD9B7262A}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{88DD9DB7-CE29-460A-A43C-3C3CD9B7262A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88DD9DB7-CE29-460A-A43C-3C3CD9B7262A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88DD9DB7-CE29-460A-A43C-3C3CD9B7262A}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{88DD9DB7-CE29-460A-A43C-3C3CD9B7262A}.Release|iPhone.Build.0 = Release|Any CPU
+		{88DD9DB7-CE29-460A-A43C-3C3CD9B7262A}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{88DD9DB7-CE29-460A-A43C-3C3CD9B7262A}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

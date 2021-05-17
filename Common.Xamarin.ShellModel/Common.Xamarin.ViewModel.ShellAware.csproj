@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>Xamarin.Forms.Shell aware navigation to eliminate boilerplate code, allowing more complex transfer of data between viewmodels in navigation.  Framework independent viewmodels that simplify logic.</Description>
+    <PackageReleaseNotes>First Release</PackageReleaseNotes>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Copyright>2021 Milton Zurita</Copyright>
+    <PackageProjectUrl>https://github.com/MiltoxBeyond/Common.Xamarin.ViewModel</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/MiltoxBeyond/Common.Xamarin.ViewModel</RepositoryUrl>
+    <RepositoryType>GIT</RepositoryType>
+    <PackageTags>Xamarin, Forms, Shell, ViewModel</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Common.Xamarin.ViewModel" Version="1.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+  </ItemGroup>
+
+</Project>

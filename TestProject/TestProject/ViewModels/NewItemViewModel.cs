@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace TestProject.ViewModels
 {
-    public class NewItemViewModel : BaseViewModel
+    public class NewItemViewModel : BaseModel
     {
         private string text;
         private string description;

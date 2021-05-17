@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace TestProject.ViewModels
 {
-    public class ItemsViewModel : BaseViewModel
+    public class ItemsViewModel : BaseModel
     {
         private Item _selectedItem;
 

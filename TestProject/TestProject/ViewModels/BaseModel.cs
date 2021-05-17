@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace TestProject.ViewModels
 {
-    public class BaseViewModel : Common.Xamarin.ViewModel.BaseViewModel
+    public class BaseModel : Common.Xamarin.ViewModel.BaseViewModel
     {
         public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
 
