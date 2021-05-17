@@ -13,7 +13,7 @@
     <PackageTags>Xamarin, Forms, Shell, ViewModel</PackageTags>
     <PackageIcon>Common.Xamarin.ViewModel.Icon.png</PackageIcon>
     <Authors>Milton Zurita</Authors>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
