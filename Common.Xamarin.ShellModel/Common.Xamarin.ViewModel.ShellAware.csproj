@@ -4,19 +4,29 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>Xamarin.Forms.Shell aware navigation to eliminate boilerplate code, allowing more complex transfer of data between viewmodels in navigation.  Framework independent viewmodels that simplify logic.</Description>
-    <PackageReleaseNotes>First Release</PackageReleaseNotes>
+    <PackageReleaseNotes>Updated NavigationProperty to be renamed NavigationParameter to follow naming of QueryParameter</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Copyright>2021 Milton Zurita</Copyright>
     <PackageProjectUrl>https://github.com/MiltoxBeyond/Common.Xamarin.ViewModel</PackageProjectUrl>
     <RepositoryUrl>https://github.com/MiltoxBeyond/Common.Xamarin.ViewModel</RepositoryUrl>
     <RepositoryType>GIT</RepositoryType>
     <PackageTags>Xamarin, Forms, Shell, ViewModel</PackageTags>
+    <PackageIcon>Common.Xamarin.ViewModel.Icon.png</PackageIcon>
+    <Authors>Milton Zurita</Authors>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Common.Xamarin.ViewModel" Version="1.1.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Common.Xamarin.ViewModel" Version="1.1.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.1180" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\Common.Xamarin.ViewModel.Icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

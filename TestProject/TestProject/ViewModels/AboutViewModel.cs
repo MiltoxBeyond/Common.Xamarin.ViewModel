@@ -13,7 +13,7 @@ namespace TestProject.ViewModels
     //[QueryProperty(nameof(Title), "title")] This calls the built in methods for setting value. If you only need simple values then this is fine.
     public class AboutViewModel : ShellAwareViewModel
     {
-        [NavigationProperty("title")]
+        [NavigationParameter("title")]
         public string Title { 
             get => GetValue<string>(); 
             set => SetValue(value); 

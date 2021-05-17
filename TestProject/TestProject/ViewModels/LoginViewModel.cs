@@ -13,7 +13,7 @@ namespace TestProject.ViewModels
 {
     public class LoginViewModel : ShellAwareViewModel, IResetOnNavigation
     {
-        [NavigationProperty("title")]
+        [NavigationParameter("title")]
         public string Username { get => GetValue<string>(); set => SetValue(value); }
         [QueryParameter("secret")]
         public string Password { get => GetValue<string>(); set => SetValue(value); }

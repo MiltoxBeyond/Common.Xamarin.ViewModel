@@ -1,7 +1,7 @@
-# Common.Xamarin.ViewModel
+# ![logo](https://raw.githubusercontent.com/MiltoxBeyond/Common.Xamarin.ViewModel/main/Common.Xamarin.ViewModel.Icon.png) Common.Xamarin.ViewModel
 Common Xamarin ViewModel to Help with Property Relationships
 
-*Side note:* I uploaded the package pointing to Common.Xamarin.ViewModels. It's a minor mistake, I'll fix it if there is another release, but seems foolish to push just for a cosmetic change.
+
 
 ## Purpose
 This library was created to eliminate some of the boilerplating that is needed to have a useful viewmodel in Xamarin (or WPF). 
@@ -72,15 +72,23 @@ These are examples of the usage of the parameters passed via query between shell
 
 ```csharp
     [QueryParameter("queryid")] //Receive value stored in shell parameter queryId
-	 public string QueryId { get => GetValue<string>(); set => SetValue(value); }
+    public string QueryId { get => GetValue<string>(); set => SetValue(value); }
 
     [QueryParameter] //Receive value stored in shell parameter of the same name as the property
-     public int Id { get => GetValue<string>(); set => SetValue(value); }
+    public int Id { get => GetValue<string>(); set => SetValue(value); }
 ```
 
 #### NavigationParameterAttribute
 These are examples of the usage.  This attribute inherits from QueryParameterAttribute so it automatically populates the value on navigating to the viewmodel with this 
 attribute, and will automatically populate the query on navigation. The parameters are the same as `QueryParameterAttribute`.
+
+```csharp
+    [NavigationParameter("queryid")] //Set or use value into query parameter 'queryid'
+    public string QueryId { get => GetValue<string>(); set => SetValue(value); }
+
+    [NavigationParameter] //Use value stored in shell parameter of the same name as the property
+    public int Id { get => GetValue<string>(); set => SetValue(value); }
+```
 
 ### Automating Communication 
 The `ShellAwareViewModel` has a method `GoToAsync` that wraps around the Shell.Current.GoToAsync method, but adds the logic to serialize data transmitted between viewmodels.

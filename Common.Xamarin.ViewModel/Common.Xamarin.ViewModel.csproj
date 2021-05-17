@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net5.0;netstandard2.1</TargetFrameworks>
-    <Version>1.1.1</Version>
+    <Version>1.1.2</Version>
     <Description>Complete Rewrite of Common.Xamarin.ViewModel with some updated tricks for relationships. Also making it open source so I don't leave everyone without documentation.</Description>
     <Copyright>2021 Milton Zurita</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -13,6 +13,16 @@
     <PackageReleaseNotes>- Small Bug Fix for Setting some values to null not triggering viewmodel changes.
 - Fixed Nuget Project pointing to wrong github url.</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageIcon>Common.Xamarin.ViewModel.Icon.png</PackageIcon>
+    <Authors>Milton Zurita</Authors>
+    <Company />
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\Common.Xamarin.ViewModel.Icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>

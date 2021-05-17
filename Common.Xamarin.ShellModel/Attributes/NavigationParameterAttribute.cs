@@ -6,8 +6,8 @@ using Xamarin.Forms;
 namespace Common.Xamarin.ViewModel.ShellAware.Attributes
 {
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = true)]
-    public class NavigationPropertyAttribute : QueryParameterAttribute
+    public class NavigationParameterAttribute : QueryParameterAttribute
     {
-        public NavigationPropertyAttribute(string QueryID = null) : base(QueryID) { }
+        public NavigationParameterAttribute(string QueryID = null) : base(QueryID) { }
     }
 }

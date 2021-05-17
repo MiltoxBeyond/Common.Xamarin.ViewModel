@@ -68,11 +68,11 @@ namespace Common.Xamarin.ViewModel
                     customData = new Dictionary<string, object>();
                 }
    
-                var properties = GetType().GetProperties().Where(i => i.CustomAttributes.Any(c => c.AttributeType == typeof(NavigationPropertyAttribute)));
+                var properties = GetType().GetProperties().Where(i => i.CustomAttributes.Any(c => c.AttributeType == typeof(NavigationParameterAttribute)));
 
                 foreach(var prop in properties)
                 {
-                    var attrib = prop.GetCustomAttribute<NavigationPropertyAttribute>();
+                    var attrib = prop.GetCustomAttribute<NavigationParameterAttribute>();
                     customData[attrib.QueryId ?? prop.Name] = prop.GetValue(this);
                 }
 
